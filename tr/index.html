@@ -440,6 +440,20 @@ html[lang="tr"] .svc-card h3{line-height:1.12}
 .hero-id .max{justify-content:center;text-align:center}
 .hero-txt{flex:1 1 100%}
 .hero-id h1 .role{text-align:center}
+
+/* phones: the section links get their own row and fit the screen; a fade shows when it still scrolls */
+@media (max-width:760px){
+  .topbar .trow{display:contents}
+  .topbar .socials a:not(:first-child):not(:last-child){display:none}
+  .topbar .tnav,.topbar .trow .tnav{order:10;flex:0 0 100%;width:100%;min-width:0;margin:0;gap:0;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}
+  .topbar .tnav a,.topbar .trow .tnav a{font-size:13.5px;padding:0 7px;min-height:40px;margin:0}
+  .topbar .tnav a:first-child{margin-inline-start:auto}.topbar .tnav a:last-child{margin-inline-end:auto}
+  .topbar .tnav.more{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  [dir="rtl"] .topbar .tnav.more{-webkit-mask-image:linear-gradient(270deg,#000 82%,transparent);mask-image:linear-gradient(270deg,#000 82%,transparent)}
+}
+@media (max-width:360px){.topbar .tnav a,.topbar .trow .tnav a{font-size:12.5px;padding:0 5px}}
+@media (max-width:480px){.topbar .tnav a:first-child{display:none}.topbar .tnav a:nth-child(2){margin-inline-start:auto}}
+@media (max-width:400px){.alt-zig .zt{min-width:0;grid-template-columns:minmax(0,1fr)}.alt-zig .zt h3{font-size:24px;overflow-wrap:anywhere}.alt-zig .zkpis{grid-template-columns:repeat(2,minmax(0,1fr))}.alt-zig .zkpis > span{padding:10px 11px;min-width:0}.alt-zig .zkpis i{overflow-wrap:anywhere;letter-spacing:.06em}}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/fav-32.png"><link rel="apple-touch-icon" href="/fav-180.png">
 
@@ -811,6 +825,9 @@ document.getElementById('copy-mail').addEventListener('click', function(){
   try { navigator.clipboard.writeText('benian@ggclan.com').then(done, function(){ window.location.href = 'mailto:benian@ggclan.com'; }); }
   catch (e) { window.location.href = 'mailto:benian@ggclan.com'; }
 });
+
+// mobile menu: fade hint when the links scroll
+(function(){var n=document.querySelectorAll('.topbar .tnav');var f=function(){n.forEach(function(e){e.classList.toggle('more',e.scrollWidth>e.clientWidth+2);});};f();window.addEventListener('resize',f);window.addEventListener('load',f);})();
 </script>
 
 </body>
