@@ -65,7 +65,7 @@ body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--f-b);fo
 .D{font-family:var(--f-d);font-stretch:125%;font-weight:800;letter-spacing:-.035em;text-transform:uppercase;line-height:.92}
 .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .pink{color:var(--pink)}
-img,video.tile{display:block;width:100%;height:100%;object-fit:cover}
+img,video.tclip{display:block;width:100%;height:100%;object-fit:cover}
 video{display:block;width:100%;height:100%;object-fit:cover}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--pink);outline-offset:3px}
@@ -727,7 +727,7 @@ function buildAlts(){
         if (w.vert) st = 'left:'+(8+i*28)+'%;top:'+(10-i*5)+'%;width:26%;height:88%';
         else st = 'left:'+(i*25)+'%;top:'+(36-i*18)+'%;width:'+(w.two?60:50)+'%;height:'+(w.two?62:56)+'%';
         var nm = src.replace(/^\/img\/|\.jpg$/g, '');
-        h += '<div class="c'+(last?' hot':'')+'" style="'+st+';transform:translateZ('+(i*60-90)+'px)"><div class="in" style="animation-delay:'+(i*.5)+'s"><video class="tile" '+wh+' poster="/media/tiles/'+nm+'.webp" data-src="/media/tiles/'+nm+'.mp4" muted loop playsinline preload="none" aria-label="'+((LANG === 'tr' ? ALT_TR : ALT)[src]||w.t).replace(/"/g,'&quot;')+'"></video>'+(w.badges && w.badges[i] ? '<span class="badge'+(last?' p':'')+'">'+w.badges[i]+'</span>' : '')+'</div></div>';
+        h += '<div class="c'+(last?' hot':'')+'" style="'+st+';transform:translateZ('+(i*60-90)+'px)"><div class="in" style="animation-delay:'+(i*.5)+'s"><video class="tclip" '+wh+' poster="/media/tiles/'+nm+'.webp" data-src="/media/tiles/'+nm+'.mp4" muted loop playsinline preload="none" aria-label="'+((LANG === 'tr' ? ALT_TR : ALT)[src]||w.t).replace(/"/g,'&quot;')+'"></video>'+(w.badges && w.badges[i] ? '<span class="badge'+(last?' p':'')+'">'+w.badges[i]+'</span>' : '')+'</div></div>';
       });
     }
     return h + '</div></div>';
@@ -742,7 +742,7 @@ function buildAlts(){
 function tilePlay(){
   var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
   if (still) return;
-  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
+  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tclip[data-src]').forEach(function(v){
     var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
     if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
   if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };

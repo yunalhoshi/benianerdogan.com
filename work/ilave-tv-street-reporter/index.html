@@ -39,7 +39,7 @@
 <h3>What I did</h3>
 <p>I hosted interviews in <b>Ankara, Antalya, Çanakkale, Denizli and Muğla</b>. Each episode opened with me on camera setting up the question, then moved straight into conversations with people on the street. Keeping the energy up and the conversation moving mattered as much as the questions: the strongest moments were the ones where people stayed, argued, laughed and drew a crowd.</p>
 <p>The same footage had to work in two formats: full episodes on YouTube, and short, hook-first clips for Instagram Reels. Moving between five cities also meant adapting fast to different crowds, a different pace and different reactions to the camera.</p>
-<div class="gallery wide"><video class="tile" width="560" height="316" poster="/media/tiles/il1.webp" data-src="/media/tiles/il1.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan reporting on the street in Ankara for İlave TV"></video><video class="tile" width="560" height="316" poster="/media/tiles/il2.webp" data-src="/media/tiles/il2.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan interviewing people in Antalya for İlave TV"></video><video class="tile" width="560" height="316" poster="/media/tiles/il6.webp" data-src="/media/tiles/il6.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan hosting a street interview in Çanakkale for İlave TV"></video></div>
+<div class="gallery wide"><video class="tclip" width="560" height="316" poster="/media/tiles/il1.webp" data-src="/media/tiles/il1.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan reporting on the street in Ankara for İlave TV"></video><video class="tclip" width="560" height="316" poster="/media/tiles/il2.webp" data-src="/media/tiles/il2.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan interviewing people in Antalya for İlave TV"></video><video class="tclip" width="560" height="316" poster="/media/tiles/il6.webp" data-src="/media/tiles/il6.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan hosting a street interview in Çanakkale for İlave TV"></video></div>
 <h3>Results</h3>
 <ul>
 <li>The videos reached <b>700K+ views on YouTube</b> and <b>2.5M+ views on Reels</b>: more than <b>3.2M views</b> in total.</li>
@@ -53,16 +53,5 @@
 <section class="cta" aria-labelledby="cta-h"><div><h2 id="cta-h">Working on something? Let&#x27;s talk.</h2><p>Esports hosting, gaming content, social and growth. Tell me what you&#x27;re working on.</p></div><div class="go"><a href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener">Book a call <span class="arr" aria-hidden="true">→</span></a><a class="ghost ltr" href="mailto:benian@ggclan.com">benian@ggclan.com</a></div></section>
 </main>
 <footer class="gut"><div class="max"><span>© 2026 <span lang="en" dir="ltr">Benian Erdoğan</span></span><nav class="fnav" aria-label="Sections"><a href="/en/">Home</a><a href="/en/#work">Work</a><a href="/services/">Services</a><a href="/showreel/">Showreel</a><a href="/en/#about">About</a></nav><span>Gaming · Content · Marketing · Automation</span></div></footer>
-<script>function tilePlay(){
-  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
-  if (still) return;
-  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
-    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
-    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
-  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
-    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
-  check();
-}
-tilePlay();</script>
 </body>
 </html>

@@ -58,7 +58,9 @@ article li b,article p b{color:var(--paper)}
 .meta{font-size:13.5px;color:var(--mute);margin:-4px 0 10px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0 8px}
 .gallery.wide{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.gallery img,.gallery video.tile{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);object-fit:cover;background:#111}
+.gallery img,.gallery video.tclip{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);object-fit:cover;background:#111}
+.gallery img,.gallery video.tclip{transition:border-color .2s,box-shadow .2s}
+.gallery img:hover,.gallery video.tclip:hover{border-color:var(--pink);box-shadow:0 0 40px rgba(255,45,135,.45)}
 .repo{display:block;padding:16px 18px;border-radius:14px;background:rgba(18,16,21,.72);border:1px solid var(--line);margin:12px 0;text-decoration:none;max-width:68ch}
 .repo:hover{border-color:var(--pink)}
 .repo b{font-family:var(--f-m);font-weight:500}

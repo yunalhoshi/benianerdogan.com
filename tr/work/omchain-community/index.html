@@ -36,7 +36,7 @@
 <li>Zealy üzerindeki oyunlaştırılmış ödül kampanyaları ve çekilişlerle Telegram topluluğunu <b>8 grupta</b> büyüttüm.</li>
 <li>Instagram'da kısa videolara ve Reels'e odaklandım.</li>
 </ul>
-<div class="gallery"><video class="tile" width="360" height="640" poster="/media/tiles/om3.webp" data-src="/media/tiles/om3.mp4" muted loop playsinline preload="none" aria-label="Avalanche House İstanbul&#x27;daki Omchain topluluk etkinliği"></video><video class="tile" width="360" height="640" poster="/media/tiles/om4.webp" data-src="/media/tiles/om4.mp4" muted loop playsinline preload="none" aria-label="Binance Blockchain Week&#x27;teki Omchain konuşması"></video><video class="tile" width="360" height="640" poster="/media/tiles/om2.webp" data-src="/media/tiles/om2.mp4" muted loop playsinline preload="none" aria-label="OMC sahiplerine teşekkür eden Omchain Foundation Instagram videosu"></video><video class="tile" width="360" height="640" poster="/media/tiles/om1.webp" data-src="/media/tiles/om1.mp4" muted loop playsinline preload="none" aria-label="Omchain Foundation Instagram Reels videosu"></video></div>
+<div class="gallery"><video class="tclip" width="360" height="640" poster="/media/tiles/om3.webp" data-src="/media/tiles/om3.mp4" muted loop playsinline preload="none" aria-label="Avalanche House İstanbul&#x27;daki Omchain topluluk etkinliği"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om4.webp" data-src="/media/tiles/om4.mp4" muted loop playsinline preload="none" aria-label="Binance Blockchain Week&#x27;teki Omchain konuşması"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om2.webp" data-src="/media/tiles/om2.mp4" muted loop playsinline preload="none" aria-label="OMC sahiplerine teşekkür eden Omchain Foundation Instagram videosu"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om1.webp" data-src="/media/tiles/om1.mp4" muted loop playsinline preload="none" aria-label="Omchain Foundation Instagram Reels videosu"></video></div>
 <h2>Sonuçlar</h2>
 <ul>
 <li>Telegram, 8 grupta <b>5 binden 9 bin üyeye</b> büyüdü.</li>
@@ -50,16 +50,5 @@
 <section class="cta" aria-labelledby="cta-h"><div><h2 id="cta-h">Bir projeniz mi var? Konuşalım.</h2><p>Espor sunuculuğu, oyun içerikleri, sosyal medya ve büyüme. Üzerinde çalıştığınız projeyi anlatın.</p></div><div class="go"><a href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener">Görüşme planla <span class="arr" aria-hidden="true">→</span></a><a class="ghost ltr" href="mailto:benian@ggclan.com">benian@ggclan.com</a></div></section>
 </main>
 <footer class="gut"><div class="max"><span>© 2026 <span lang="en" dir="ltr">Benian Erdoğan</span></span><nav class="fnav" aria-label="Bölümler"><a href="/tr/">Ana sayfa</a><a href="/tr/#work">İşler</a><a href="/tr/services/">Hizmetler</a><a href="/tr/showreel/">Showreel</a><a href="/tr/#about">Hakkımda</a></nav><span>Oyun · İçerik · Pazarlama · Otomasyon</span></div></footer>
-<script>function tilePlay(){
-  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
-  if (still) return;
-  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
-    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
-    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
-  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
-    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
-  check();
-}
-tilePlay();</script>
 </body>
 </html>

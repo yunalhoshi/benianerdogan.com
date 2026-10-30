@@ -36,7 +36,7 @@
 <li>نمّيتُ مجتمع Telegram عبر <b>8 مجموعات</b> بحملات مكافآت قائمة على التلعيب على Zealy ومسابقات بجوائز.</li>
 <li>ركّزتُ في Instagram على الفيديو القصير وReels.</li>
 </ul>
-<div class="gallery"><video class="tile" width="360" height="640" poster="/media/tiles/om3.webp" data-src="/media/tiles/om3.mp4" muted loop playsinline preload="none" aria-label="فعالية مجتمع Omchain في Avalanche House إسطنبول"></video><video class="tile" width="360" height="640" poster="/media/tiles/om4.webp" data-src="/media/tiles/om4.mp4" muted loop playsinline preload="none" aria-label="كلمة Omchain في Binance Blockchain Week"></video><video class="tile" width="360" height="640" poster="/media/tiles/om2.webp" data-src="/media/tiles/om2.mp4" muted loop playsinline preload="none" aria-label="فيديو لمؤسسة Omchain على Instagram يشكر حاملي OMC"></video><video class="tile" width="360" height="640" poster="/media/tiles/om1.webp" data-src="/media/tiles/om1.mp4" muted loop playsinline preload="none" aria-label="فيديو Reels لمؤسسة Omchain على Instagram"></video></div>
+<div class="gallery"><video class="tclip" width="360" height="640" poster="/media/tiles/om3.webp" data-src="/media/tiles/om3.mp4" muted loop playsinline preload="none" aria-label="فعالية مجتمع Omchain في Avalanche House إسطنبول"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om4.webp" data-src="/media/tiles/om4.mp4" muted loop playsinline preload="none" aria-label="كلمة Omchain في Binance Blockchain Week"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om2.webp" data-src="/media/tiles/om2.mp4" muted loop playsinline preload="none" aria-label="فيديو لمؤسسة Omchain على Instagram يشكر حاملي OMC"></video><video class="tclip" width="360" height="640" poster="/media/tiles/om1.webp" data-src="/media/tiles/om1.mp4" muted loop playsinline preload="none" aria-label="فيديو Reels لمؤسسة Omchain على Instagram"></video></div>
 <h2>النتائج</h2>
 <ul>
 <li>نما Telegram من <b>5K إلى 9K عضو</b> عبر 8 مجموعات.</li>
@@ -50,16 +50,5 @@
 <section class="cta" aria-labelledby="cta-h"><div><h2 id="cta-h">هل تعمل على مشروع؟ لنتحدّث.</h2><p>تقديم الرياضات الإلكترونية ومحتوى الألعاب ووسائل التواصل والنمو. أخبرني عن مشروعك.</p></div><div class="go"><a href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener">احجز مكالمة <span class="arr" aria-hidden="true">←</span></a><a class="ghost ltr" href="mailto:benian@ggclan.com">benian@ggclan.com</a></div></section>
 </main>
 <footer class="gut"><div class="max"><span>© 2026 <span lang="en" dir="ltr">Benian Erdoğan</span></span><nav class="fnav" aria-label="الأقسام"><a href="/ar/">الرئيسية</a><a href="/ar/#work">الأعمال</a><a href="/ar/services/">الخدمات</a><a href="/ar/showreel/">الفيديو التعريفي</a><a href="/ar/#about">نبذة عني</a></nav><span>الألعاب · المحتوى · التسويق · الأتمتة</span></div></footer>
-<script>function tilePlay(){
-  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
-  if (still) return;
-  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
-    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
-    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
-  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
-    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
-  check();
-}
-tilePlay();</script>
 </body>
 </html>
