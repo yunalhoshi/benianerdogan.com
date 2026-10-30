@@ -430,6 +430,10 @@ html{background:var(--ink)}
 .hero-id .max{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;padding-top:clamp(32px,4vw,56px)}
 .reelhero .hero-id h1{margin:0;font-size:clamp(40px,6vw,84px);font-weight:800;line-height:.92;letter-spacing:-.035em}
 .hero-id p{margin:0;color:var(--mute)}
+.reelhero .hero-id h1{line-height:1}
+.gb{position:relative;color:transparent}
+.gb::before{content:attr(data-g);position:absolute;left:0;top:0;color:var(--paper)}
+.gb::after{content:"";position:absolute;left:50%;top:.02em;width:.34em;height:.135em;border:.07em solid var(--paper);border-top:0;border-radius:0 0 .4em .4em;transform:translateX(-50%);box-sizing:border-box}
 </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="fav-32.png"><link rel="apple-touch-icon" href="fav-180.png">
 
@@ -456,7 +460,7 @@ html{background:var(--ink)}
     <video id="reel" poster="media/gg.jpg" autoplay muted loop playsinline preload="auto"><source src="media/showreel-m.mp4" type="video/mp4" media="(max-width: 820px)"><source src="media/showreel.mp4" type="video/mp4"></video>
     <div class="vol"><button type="button" id="sound" aria-pressed="false" aria-label="Unmute"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 4V5L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4z"/></svg></button><input type="range" id="volr" min="0" max="100" value="0" aria-label="Volume"></div>
   </div>
-  <div class="hero-id gut"><div class="max"><h1 class="D">Benian Erdoğan<span class="pink">.</span></h1><p class="lbl">Host, Gaming Creator &amp; Marketer</p></div></div>
+  <div class="hero-id gut"><div class="max"><h1 class="D">Benian Erdo<span class="gb" data-g="G">ğ</span>an<span class="pink">.</span></h1><p class="lbl">Host, Gaming Creator &amp; Marketer</p></div></div>
 </section>
 
 <div class="wrap" id="work">
