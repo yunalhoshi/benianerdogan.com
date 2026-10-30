@@ -1,27 +1,27 @@
 # benianerdogan.com
 
-Personal portfolio of **Benian Erdoğan**: on-camera host, gaming creator and marketer.
+Personal portfolio of **Benian Erdoğan**: esports host, gaming content creator and marketer.
 
-**Live site:** https://benianerdogan.com
+**Live site:** https://benianerdogan.com · [Türkçe](https://benianerdogan.com/tr/) · [العربية](https://benianerdogan.com/ar/)
 
 ![Benian Erdoğan](og.jpg)
 
-## What's inside
+## Pages
 
-- A 1080p showreel at the top of the page (`media/showreel.mp4`).
-- Selected work: GG Clan, İlave TV, esports tournaments and broadcasts, Omchain, AI and automation, gaming content and affiliates.
-- A detail panel for each project with the role, dates, what I did and the numbers, including GG Clan's paid campaign results across TikTok, Meta, Snapchat, Amazon/Twitch and Reddit.
-- Contact links and a calendar link to book a meeting.
+- `/`: home page with the showreel, selected work, services and about.
+- `/tr/` and `/ar/`: Turkish home page and Arabic landing page (right to left).
+- `/work/…/`: one case study per project (GG Clan, İlave TV, esports tournaments and broadcast, Omchain, AI and automation, VALORANT and CS2 content, iGaming affiliates).
+- `/services/` and `/showreel/`.
 
 ## Built with
 
-- One hand-written HTML file with CSS and vanilla JavaScript. No framework, no build step.
-- Showreel made in [Remotion](https://www.remotion.dev/), with FFmpeg for editing and Real-ESRGAN for upscaling.
-- Hosted on Netlify.
+- Static HTML, CSS and vanilla JavaScript. No framework.
+- Showreel made in [Remotion](https://www.remotion.dev/), with FFmpeg for editing and Real-ESRGAN for upscaling. Served as AV1 (WebM) with an H.264 fallback.
+- Self-hosted, subset fonts (Archivo, Manrope, Cairo) and AVIF/WebP images.
+- Structured data: Person, WebSite, ProfilePage, BreadcrumbList and VideoObject. Hreflang for English, Turkish and Arabic.
+- Hosted on GitHub Pages.
 
 ## Run it locally
-
-Open `index.html` in a browser, or serve the folder:
 
 ```bash
 npx serve .

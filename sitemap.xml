@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://benianerdogan.com/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/tr/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/ar/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/services/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/showreel/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/gg-clan/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/ilave-tv-street-reporter/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/esports-tournaments-broadcast/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/omchain-community/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/ai-automation/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/valorant-cs2-content/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://benianerdogan.com/work/igaming-affiliates/</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
