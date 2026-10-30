@@ -539,7 +539,7 @@ html[lang="tr"] .svc-card h3{line-height:1.12}
     <h2 class="D" data-i18n="work">Esports &amp; gaming work</h2>
   </div>
 
-  <div id="worklist"><noscript><ul class="worklinks"><li><a href="/work/ilave-tv-street-reporter/">On camera: İlave TV &amp; ENC 2026</a></li><li><a href="/work/esports-tournaments-broadcast/">Live events: Tournaments &amp; broadcast</a></li><li><a href="/work/valorant-cs2-content/">In game: VALORANT &amp; CS2</a></li><li><a href="/work/gg-clan/">GG Clan</a></li><li><a href="/work/igaming-affiliates/">Affiliates (iGaming)</a></li><li><a href="/work/ai-automation/">AI &amp; automation</a></li><li><a href="/work/omchain-community/">Omchain</a></li></ul></noscript></div>
+  <div id="worklist"><noscript><ul class="worklinks"><li><a href="/work/gg-clan/">GG Clan</a></li><li><a href="/work/omchain-community/">Omchain</a></li><li><a href="/work/ilave-tv-street-reporter/">On camera: İlave TV &amp; ENC 2026</a></li><li><a href="/work/igaming-affiliates/">Affiliates (iGaming)</a></li><li><a href="/work/esports-tournaments-broadcast/">Live events: Tournaments &amp; broadcast</a></li><li><a href="/work/ai-automation/">AI &amp; automation</a></li><li><a href="/work/valorant-cs2-content/">In game: VALORANT &amp; CS2</a></li></ul></noscript></div>
     <!-- WHY ME -->
     <div class="tile why why-wide" id="why"><div><h2 class="lbl" data-i18n="why">Why work with me</h2>
         <h3 data-i18n="why_h">I've hosted it, played it, run it and sold it.</h3>
@@ -741,20 +741,20 @@ paintVol();
 // Alternative Selected work layouts (2 · Index, 3 · Zig-zag, 4 · Showcase), built from one list; rebuilt when the language changes
 function buildAlts(){
   var W = [
-    {k:'ilave', t:'On camera: İlave TV & ENC 2026', org:'İlave TV · ENC 2026', m:'3.2M+', ml:'views · 2.5M+ on Reels', imgs:['/img/il1.jpg','/img/il2.jpg','/img/il6.jpg'], badges:['Ankara','Antalya','Çanakkale'],
-      kpis:[['ENC 2026','Host &amp; caster · R6'],['2.5M+','Reels views'],['700K+','YouTube views']]},
-    {k:'events', t:'Tournaments & broadcast', org:'Live events · 2018–2022', m:'4 yrs', ml:'Gençlik Kupası · VCT · IEM', imgs:['/img/gk_stage.jpg','/img/gk_ef.jpg','/img/gk_screen2.jpg'], badges:['Stage','Broadcast','Operations'],
-      kpis:[['4','National tournaments'],['VCT','Broadcast support'],['IEM','Katowice 2018–20']]},
-    {k:'game', t:'In game: VALORANT & CS2', org:'YouTube · Twitch', m:'100+', ml:'players coached', imgs:['/img/k2.jpg','/img/k1.jpg','/img/k1.jpg'], two:true,
-      kpis:[['100+','Players coached'],['24','Shorts'],['4','Games: VALORANT, CS2, Call of Duty, R6']]},
     {k:'gg', t:'Partnerships, content, ads & coaching', org:'GG Clan · Global Partnership Manager & Coach', m:'1.86M', ml:'TikTok views · 300–400 reached / mo', imgs:['/img/gg5.jpg','/img/gg3.jpg','/img/gg1.jpg'], vert:true, badges:['241K','386K','507K'],
       kpis:[['1.86M','TikTok views'],['1.79M','Ad impressions'],['258','Ad conversions'],['300–400','Creators reached / mo']]},
+    {k:'omchain', t:'Community & social', org:'Omchain Foundation · 2023–2024', m:'5K → 9K', ml:'Telegram members · Instagram 950 → 2K', imgs:['/img/om3.jpg','/img/om2.jpg','/img/om1.jpg'], vert:true, badges:['','Instagram 2K','Telegram 9K'],
+      kpis:[['5K → 9K','Telegram members'],['+110%','Instagram growth'],['950 → 2K','Instagram']]},
+    {k:'ilave', t:'On camera: İlave TV & ENC 2026', org:'İlave TV · ENC 2026', m:'3.2M+', ml:'views · 2.5M+ on Reels', imgs:['/img/il1.jpg','/img/il2.jpg','/img/il6.jpg'], badges:['Ankara','Antalya','Çanakkale'],
+      kpis:[['ENC 2026','Host &amp; caster · R6'],['2.5M+','Reels views'],['700K+','YouTube views']]},
     {k:'aff', t:'Affiliates', org:'Affiliate Manager · iGaming · 2024', m:'50–75', ml:'partners · 150–200 FTDs / mo', stats:true,
       kpis:[['50–75','Partners'],['150–200','FTDs / month'],['16–20','Telegram channels']]},
+    {k:'events', t:'Tournaments & broadcast', org:'Live events · 2018–2022', m:'4 yrs', ml:'Gençlik Kupası · VCT · IEM', imgs:['/img/gk_stage.jpg','/img/gk_ef.jpg','/img/gk_screen2.jpg'], badges:['Stage','Broadcast','Operations'],
+      kpis:[['4','National tournaments'],['VCT','Broadcast support'],['IEM','Katowice 2018–20']]},
     {k:'ai', t:'AI & automation', org:'GitHub · yunalhoshi', m:'5', ml:'public projects · Claude API', code:true,
       kpis:[['5','Public projects'],['EN · AR · TR','Outreach languages'],['Claude API','Python · Node.js']]},
-    {k:'omchain', t:'Community & social', org:'Omchain Foundation · 2023–2024', m:'5K → 9K', ml:'Telegram members · Instagram 950 → 2K', imgs:['/img/om3.jpg','/img/om2.jpg','/img/om1.jpg'], vert:true, badges:['','Instagram 2K','Telegram 9K'],
-      kpis:[['5K → 9K','Telegram members'],['+110%','Instagram growth'],['950 → 2K','Instagram']]}
+    {k:'game', t:'In game: VALORANT & CS2', org:'YouTube · Twitch', m:'100+', ml:'players coached', imgs:['/img/k2.jpg','/img/k1.jpg','/img/k1.jpg'], two:true,
+      kpis:[['100+','Players coached'],['24','Shorts'],['4','Games: VALORANT, CS2, Call of Duty, R6']]}
   ];
   var W_TR = {
     gg:{t:'Ortaklıklar, içerik, reklam ve koçluk', org:'GG Clan · Global İş Birlikleri Yöneticisi ve Koç', m:'1,86 milyon', ml:'TikTok izlenme · ayda 300–400 kişiye ulaşım', kpis:[['1,86 milyon','TikTok izlenme'],['1,79 milyon','Reklam gösterimi'],['258','Reklam dönüşümü'],['300–400','Aylık ulaşılan üretici ve oyuncu']]},
