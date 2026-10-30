@@ -327,7 +327,7 @@ html{background:var(--ink)}
 @media (max-width:640px){.topbar .lang{width:34px;height:34px;font-size:11px}}
 
 .head p{max-width:58ch;text-wrap:balance}
-@media (min-width:900px){.head p{text-align:right;margin-left:auto}}
+@media (min-width:900px){.head{flex-wrap:nowrap}.head h2{white-space:nowrap;font-size:clamp(32px,4vw,64px)!important}.head p{text-align:right;margin-left:auto;max-width:36ch;flex:0 1 auto}}
 .sheet .ads{margin-bottom:40px}
 /* Turkish capitals (İ Ş Ç Ğ) need more line height in big headings */
 html[lang="tr"] .D,html[lang="tr"] .close .build,html[lang="tr"] .why h3{line-height:1.1}
