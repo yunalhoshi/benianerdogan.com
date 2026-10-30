@@ -46,6 +46,7 @@ h1.D .role{display:block;margin-top:14px;font-size:clamp(22px,2.8vw,34px);color:
 .work-list a:hover{border-color:var(--pink)}
 .work-list small{color:var(--mute);font-weight:600;white-space:nowrap}
 .langm{position:relative}
+@media (min-width:761px){.topbar .langm{position:absolute;inset-inline-end:clamp(16px,2.5vw,32px);top:50%;transform:translateY(-50%)}}
 .langm summary{list-style:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:rgba(6,5,7,.5);color:var(--paper);font:800 12px/1 var(--f-b);cursor:pointer}
 .langm summary::-webkit-details-marker{display:none}
 .langm[open] summary,.langm summary:hover{border-color:var(--pink);background:var(--pink-soft)}
