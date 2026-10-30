@@ -39,7 +39,7 @@
 <h3>ما قمتُ به</h3>
 <p>قدّمتُ مقابلات في <b>أنقرة وأنطاليا وتشاناكالي ودنيزلي وموغلا</b>. كانت كل حلقة تبدأ بظهوري أمام الكاميرا لطرح السؤال، ثم تنتقل مباشرةً إلى الحوار مع الناس في الشارع. وكان الحفاظ على الحماس واستمرار الحديث لا يقلّ أهمية عن الأسئلة نفسها: فأقوى اللحظات كانت تلك التي يبقى فيها الناس ويتجادلون ويضحكون ويجذبون حشداً من حولهم.</p>
 <p>كان على اللقطات نفسها أن تنجح بصيغتين: حلقات كاملة على YouTube، ومقاطع قصيرة تبدأ بافتتاحية جاذبة لـ Instagram Reels. كما تطلّب التنقل بين خمس مدن التكيّف بسرعة مع جماهير مختلفة وإيقاع مختلف وردود فعل مختلفة تجاه الكاميرا.</p>
-<div class="gallery wide"><picture><source srcset="/img/il1.avif" type="image/avif"><source srcset="/img/il1.webp" type="image/webp"><img src="/img/il1.jpg" width="560" height="316" loading="lazy" decoding="async" alt="Benian Erdoğan تجري مقابلة ميدانية في أنقرة لصالح İlave TV"></picture><picture><source srcset="/img/il2.avif" type="image/avif"><source srcset="/img/il2.webp" type="image/webp"><img src="/img/il2.jpg" width="560" height="316" loading="lazy" decoding="async" alt="Benian Erdoğan تحاور الناس في أنطاليا لصالح İlave TV"></picture><picture><source srcset="/img/il6.avif" type="image/avif"><source srcset="/img/il6.webp" type="image/webp"><img src="/img/il6.jpg" width="560" height="316" loading="lazy" decoding="async" alt="Benian Erdoğan تقدّم مقابلة ميدانية في تشاناكالي لصالح İlave TV"></picture></div>
+<div class="gallery wide"><video class="tile" width="560" height="316" poster="/media/tiles/il1.webp" data-src="/media/tiles/il1.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan تجري مقابلة ميدانية في أنقرة لصالح İlave TV"></video><video class="tile" width="560" height="316" poster="/media/tiles/il2.webp" data-src="/media/tiles/il2.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan تحاور الناس في أنطاليا لصالح İlave TV"></video><video class="tile" width="560" height="316" poster="/media/tiles/il6.webp" data-src="/media/tiles/il6.mp4" muted loop playsinline preload="none" aria-label="Benian Erdoğan تقدّم مقابلة ميدانية في تشاناكالي لصالح İlave TV"></video></div>
 <h3>النتائج</h3>
 <ul>
 <li>حققت الفيديوهات <b>أكثر من 700K مشاهدة على YouTube</b> و<b>أكثر من 2.5M مشاهدة على Reels</b>: أي ما يزيد على <b>3.2M مشاهدة</b> إجمالاً.</li>
@@ -53,5 +53,16 @@
 <section class="cta" aria-labelledby="cta-h"><div><h2 id="cta-h">هل تعمل على مشروع؟ لنتحدّث.</h2><p>تقديم الرياضات الإلكترونية ومحتوى الألعاب ووسائل التواصل والنمو. أخبرني عن مشروعك.</p></div><div class="go"><a href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener">احجز مكالمة <span class="arr" aria-hidden="true">←</span></a><a class="ghost ltr" href="mailto:benian@ggclan.com">benian@ggclan.com</a></div></section>
 </main>
 <footer class="gut"><div class="max"><span>© 2026 <span lang="en" dir="ltr">Benian Erdoğan</span></span><nav class="fnav" aria-label="الأقسام"><a href="/ar/">الرئيسية</a><a href="/ar/#work">الأعمال</a><a href="/ar/services/">الخدمات</a><a href="/ar/showreel/">الفيديو التعريفي</a><a href="/ar/#about">نبذة عني</a></nav><span>الألعاب · المحتوى · التسويق · الأتمتة</span></div></footer>
+<script>function tilePlay(){
+  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
+  if (still) return;
+  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
+    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
+    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
+  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
+    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
+  check();
+}
+tilePlay();</script>
 </body>
 </html>

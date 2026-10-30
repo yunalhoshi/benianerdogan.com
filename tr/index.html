@@ -65,7 +65,7 @@ body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--f-b);fo
 .D{font-family:var(--f-d);font-stretch:125%;font-weight:800;letter-spacing:-.035em;text-transform:uppercase;line-height:.92}
 .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .pink{color:var(--pink)}
-img{display:block;width:100%;height:100%;object-fit:cover}
+img,video.tile{display:block;width:100%;height:100%;object-fit:cover}
 video{display:block;width:100%;height:100%;object-fit:cover}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--pink);outline-offset:3px}
@@ -683,7 +683,7 @@ function buildAlts(){
   var W = [
     {k:'gg', t:'Partnerships, content, ads & coaching', org:'GG Clan · Global Partnership Manager & Coach', m:'1.86M', ml:'TikTok views · 300–400 reached / mo', imgs:['/img/gg5.jpg','/img/gg3.jpg','/img/gg1.jpg'], vert:true, badges:['241K','386K','507K'],
       kpis:[['1.86M','TikTok views'],['1.79M','Ad impressions'],['258','Ad conversions'],['300–400','Creators reached / mo']]},
-    {k:'omchain', t:'Community & social', org:'Omchain Foundation · 2023–2024', m:'5K → 9K', ml:'Telegram members · Instagram 950 → 2K', imgs:['/img/om3.jpg','/img/om2.jpg','/img/om1.jpg'], vert:true, badges:['','Instagram 2K','Telegram 9K'],
+    {k:'omchain', t:'Community & social', org:'Omchain Foundation · 2023–2024', m:'5K → 9K', ml:'Telegram members · Instagram 950 → 2K', imgs:['/img/om3.jpg','/img/om2.jpg','/img/om1.jpg'], vert:true, 
       kpis:[['5K → 9K','Telegram members'],['+110%','Instagram growth'],['950 → 2K','Instagram']]},
     {k:'ilave', t:'On camera: İlave TV & ENC 2026', org:'İlave TV · ENC 2026', m:'3.2M+', ml:'views · 2.5M+ on Reels', imgs:['/img/il1.jpg','/img/il2.jpg','/img/il6.jpg'], badges:['Ankara','Antalya','Çanakkale'],
       kpis:[['ENC 2026','Host &amp; caster · R6'],['2.5M+','Reels views'],['700K+','YouTube views']]},
@@ -726,7 +726,8 @@ function buildAlts(){
         var last = (w.two ? i === 1 : i === 2), st, base = src.replace(/\.jpg$/, ''), tall = /\/(gg|om)\d/.test(src), wh = tall ? 'width="360" height="640"' : 'width="560" height="316"';
         if (w.vert) st = 'left:'+(8+i*28)+'%;top:'+(10-i*5)+'%;width:26%;height:88%';
         else st = 'left:'+(i*25)+'%;top:'+(36-i*18)+'%;width:'+(w.two?60:50)+'%;height:'+(w.two?62:56)+'%';
-        h += '<div class="c'+(last?' hot':'')+'" style="'+st+';transform:translateZ('+(i*60-90)+'px)"><div class="in" style="animation-delay:'+(i*.5)+'s"><picture><source srcset="'+base+'.avif" type="image/avif"><source srcset="'+base+'.webp" type="image/webp"><img loading="lazy" decoding="async" '+wh+' src="'+src+'" alt="'+((LANG === 'tr' ? ALT_TR : ALT)[src]||w.t).replace(/"/g,'&quot;')+'"></picture>'+(w.badges && w.badges[i] ? '<span class="badge'+(last?' p':'')+'">'+w.badges[i]+'</span>' : '')+'</div></div>';
+        var nm = src.replace(/^\/img\/|\.jpg$/g, '');
+        h += '<div class="c'+(last?' hot':'')+'" style="'+st+';transform:translateZ('+(i*60-90)+'px)"><div class="in" style="animation-delay:'+(i*.5)+'s"><video class="tile" '+wh+' poster="/media/tiles/'+nm+'.webp" data-src="/media/tiles/'+nm+'.mp4" muted loop playsinline preload="none" aria-label="'+((LANG === 'tr' ? ALT_TR : ALT)[src]||w.t).replace(/"/g,'&quot;')+'"></video>'+(w.badges && w.badges[i] ? '<span class="badge'+(last?' p':'')+'">'+w.badges[i]+'</span>' : '')+'</div></div>';
       });
     }
     return h + '</div></div>';
@@ -734,6 +735,19 @@ function buildAlts(){
   document.querySelectorAll('.alt').forEach(function(e){ e.remove(); });
   var zig = '<div class="alt alt-zig">' + W.map(function(w){ return '<a class="zz" href="'+BASE+'/work/'+SLUG[w.k]+'/" data-case="'+w.k+'"><div class="zm mini3d">'+mini(w)+'</div><div class="zt"><span class="lbl pink">'+w.org+'</span><h3 class="D">'+w.t+'</h3><p>'+caseData(w.k).lead+'</p><div class="zkpis">'+w.kpis.map(function(k){ return '<span><b>'+k[0]+'</b><i>'+k[1]+'</i></span>'; }).join('')+'</div><span class="more">'+T('more')+'</span></div></a>'; }).join('') + '</div>';
   document.getElementById('worklist').insertAdjacentHTML('afterend', zig);
+  tilePlay();
+}
+
+// Short silent clips in the work cards: load and play only while on screen
+function tilePlay(){
+  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
+  if (still) return;
+  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
+    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
+    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
+  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
+    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
+  check();
 }
 
 // Apply the language to every marked element, then rebuild the work cards

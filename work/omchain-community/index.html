@@ -36,7 +36,7 @@
 <li>Grew the Telegram community across <b>8 groups</b> with gamified reward campaigns on Zealy and giveaways.</li>
 <li>Focused Instagram on short-form video and Reels.</li>
 </ul>
-<div class="gallery"><picture><source srcset="/img/om3.avif" type="image/avif"><source srcset="/img/om3.webp" type="image/webp"><img src="/img/om3.jpg" width="360" height="640" loading="lazy" decoding="async" alt="Omchain community event at Avalanche House Istanbul"></picture><picture><source srcset="/img/om4.avif" type="image/avif"><source srcset="/img/om4.webp" type="image/webp"><img src="/img/om4.jpg" width="360" height="640" loading="lazy" decoding="async" alt="Omchain talk at Binance Blockchain Week"></picture><picture><source srcset="/img/om2.avif" type="image/avif"><source srcset="/img/om2.webp" type="image/webp"><img src="/img/om2.jpg" width="360" height="640" loading="lazy" decoding="async" alt="Omchain Foundation Instagram video thanking OMC holders"></picture><picture><source srcset="/img/om1.avif" type="image/avif"><source srcset="/img/om1.webp" type="image/webp"><img src="/img/om1.jpg" width="360" height="640" loading="lazy" decoding="async" alt="Omchain Foundation Instagram Reel"></picture></div>
+<div class="gallery"><video class="tile" width="360" height="640" poster="/media/tiles/om3.webp" data-src="/media/tiles/om3.mp4" muted loop playsinline preload="none" aria-label="Omchain community event at Avalanche House Istanbul"></video><video class="tile" width="360" height="640" poster="/media/tiles/om4.webp" data-src="/media/tiles/om4.mp4" muted loop playsinline preload="none" aria-label="Omchain talk at Binance Blockchain Week"></video><video class="tile" width="360" height="640" poster="/media/tiles/om2.webp" data-src="/media/tiles/om2.mp4" muted loop playsinline preload="none" aria-label="Omchain Foundation Instagram video thanking OMC holders"></video><video class="tile" width="360" height="640" poster="/media/tiles/om1.webp" data-src="/media/tiles/om1.mp4" muted loop playsinline preload="none" aria-label="Omchain Foundation Instagram Reel"></video></div>
 <h2>Results</h2>
 <ul>
 <li>Telegram grew from <b>5K to 9K members</b> across 8 groups.</li>
@@ -50,5 +50,16 @@
 <section class="cta" aria-labelledby="cta-h"><div><h2 id="cta-h">Working on something? Let&#x27;s talk.</h2><p>Esports hosting, gaming content, social and growth. Tell me what you&#x27;re working on.</p></div><div class="go"><a href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener">Book a call <span class="arr" aria-hidden="true">→</span></a><a class="ghost ltr" href="mailto:benian@ggclan.com">benian@ggclan.com</a></div></section>
 </main>
 <footer class="gut"><div class="max"><span>© 2026 <span lang="en" dir="ltr">Benian Erdoğan</span></span><nav class="fnav" aria-label="Sections"><a href="/en/">Home</a><a href="/en/#work">Work</a><a href="/services/">Services</a><a href="/showreel/">Showreel</a><a href="/en/#about">About</a></nav><span>Gaming · Content · Marketing · Automation</span></div></footer>
+<script>function tilePlay(){
+  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
+  if (still) return;
+  var check = function(){ var h = window.innerHeight; document.querySelectorAll('video.tile[data-src]').forEach(function(v){
+    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
+    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
+  if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
+    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
+  check();
+}
+tilePlay();</script>
 </body>
 </html>
