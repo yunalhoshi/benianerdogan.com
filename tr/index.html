@@ -6,10 +6,10 @@
 <!-- Google Search Console: replace the comment below with the verification tag, e.g. <meta name="google-site-verification" content="YOUR-CODE"> -->
 <!-- GSC-VERIFICATION -->
 <link rel="canonical" href="https://benianerdogan.com/tr/">
-<link rel="alternate" hreflang="en" href="https://benianerdogan.com/">
+<link rel="alternate" hreflang="en" href="https://benianerdogan.com/en/">
 <link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/">
 <link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/">
-<link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/">
+<link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/en/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,6 +327,7 @@ html{background:var(--ink)}
 @media (max-width:640px){.topbar .lang{width:34px;height:34px;font-size:11px}}
 
 .head p{max-width:58ch;text-wrap:balance}
+@media (min-width:900px){.head p{text-align:right;margin-left:auto}}
 .sheet .ads{margin-bottom:40px}
 /* Turkish capitals (İ Ş Ç Ğ) need more line height in big headings */
 html[lang="tr"] .D,html[lang="tr"] .close .build,html[lang="tr"] .why h3{line-height:1.1}
@@ -355,11 +356,11 @@ picture{display:contents}
 .svc-card h3{margin:0;font-family:var(--f-d);font-stretch:125%;font-weight:800;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.03em;text-transform:uppercase;line-height:1}
 html[lang="tr"] .svc-card h3{line-height:1.12}
 .svc-card p{margin:0;color:#d9d2d6;font-size:15.5px;line-height:1.65}
-.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(24px,4vw,64px);align-items:start}
-.about-grid h2{margin:0;font-size:clamp(40px,6vw,84px)}
+.about-grid{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.about-grid h2{margin:0;font-size:clamp(40px,4.8vw,72px)}
 .about-txt p{margin:0 0 18px;font-size:clamp(16px,1.4vw,18.5px);line-height:1.75;color:#e6e0e3;max-width:68ch}
 @media (max-width:980px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:860px){.about-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.about-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.svc-grid{grid-template-columns:minmax(0,1fr)}}
 .fnav{display:flex;gap:18px;flex-wrap:wrap}
 .fnav a{color:var(--mute);text-decoration:none}
@@ -397,7 +398,7 @@ html[lang="tr"] .svc-card h3{line-height:1.12}
         <a href="mailto:benian@ggclan.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.1V17h16V7.1zM5.4 7l6.6 4.2L18.6 7z"/></svg></a>
       </div>
       <a class="btn pri" href="https://calendar.app.google/nPgciWaRmvbspx876" target="_blank" rel="noopener" data-i18n="book">GÖRÜŞME PLANLA</a>
-      <details class="langm"><summary><span class="vh" data-i18n="langLabel">Dil</span> <span data-i18n="langBtn">TR</span></summary><div class="langm-list"><a href="/" hreflang="en" lang="en">English</a><a href="/tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a><a href="/ar/" hreflang="ar" lang="ar" dir="rtl">العربية</a></div></details>
+      <details class="langm"><summary><span class="vh" data-i18n="langLabel">Dil</span> <span data-i18n="langBtn">TR</span></summary><div class="langm-list"><a href="/en/" hreflang="en" lang="en">English</a><a href="/tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a><a href="/ar/" hreflang="ar" lang="ar" dir="rtl">العربية</a></div></details>
     </div>
   </div>
 </header>

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://benianerdogan.com/</loc>
+    <loc>https://benianerdogan.com/en/</loc>
     <lastmod>2026-10-30</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/en/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/en/"/>
   </url>
   <url>
     <loc>https://benianerdogan.com/tr/</loc>
     <lastmod>2026-10-30</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/en/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/en/"/>
   </url>
   <url>
     <loc>https://benianerdogan.com/ar/</loc>
     <lastmod>2026-10-30</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://benianerdogan.com/en/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://benianerdogan.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://benianerdogan.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://benianerdogan.com/en/"/>
   </url>
   <url>
     <loc>https://benianerdogan.com/services/</loc>
