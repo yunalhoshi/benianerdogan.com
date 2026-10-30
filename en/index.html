@@ -57,7 +57,9 @@
         "Community management",
         "iGaming affiliate marketing",
         "VALORANT",
-        "Counter-Strike 2"
+        "Counter-Strike 2",
+        "Call of Duty",
+        "Rainbow Six Siege"
       ],
       "mainEntityOfPage": {
         "@id": "https://benianerdogan.com/en/#profilepage"
@@ -173,10 +175,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .alt-zig .more{justify-self:start;margin-top:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:background .3s,color .3s,border-color .3s}
 .alt-zig .zz:hover .more{background:var(--pink);border-color:var(--pink);color:var(--ink)}
 .alt-zig .zkpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:6px}
-.alt-zig .zkpis span{display:grid;gap:4px;padding:12px 14px;border-radius:14px;background:rgba(244,240,242,.05);border:1px solid var(--line)}
+.alt-zig .zkpis > span{display:grid;gap:4px;padding:12px 14px;border-radius:14px;background:rgba(244,240,242,.05);border:1px solid var(--line)}
 .alt-zig .zkpis b{font-family:var(--f-d);font-stretch:125%;font-weight:900;font-size:clamp(20px,1.9vw,28px);letter-spacing:-.045em;line-height:1}
 .alt-zig .zkpis i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-.alt-zig .zkpis span:first-child{border-color:rgba(255,45,135,.5)}
+.alt-zig .zkpis > span:first-child{border-color:rgba(255,45,135,.5)}
 /* paid ads block in the GG Clan sheet */
 .sheet .ads{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
 .sheet .adbars{display:grid;gap:12px;margin-top:6px}
@@ -293,7 +295,7 @@ button.tile{cursor:pointer}
 .sheet li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--pink)}
 .sheet li b{color:var(--paper)}
 .sheet .kp{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.sheet .kp span{padding:10px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line);display:grid}
+.sheet .kp > span{padding:10px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line);display:grid}
 .sheet .kp b{font-family:var(--f-d);font-stretch:125%;font-weight:900;font-size:24px;letter-spacing:-.04em;line-height:1}
 .sheet .kp i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .sheet .sr{padding-top:14px;margin-top:14px;border-top:1px solid var(--line)}
@@ -329,9 +331,9 @@ html{background:var(--ink)}
 .topbar .btn{text-transform:uppercase;letter-spacing:.08em;font-weight:800}
 .reelhero .screen{box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax)}
 .reelhero .screen::after{display:none}
-.alt-zig .zkpis span:first-child{border-color:var(--line)}
-.alt-zig .zkpis span{transition:border-color .25s,box-shadow .25s,background .25s}
-.alt-zig .zkpis span:hover{border-color:var(--pink);background:rgba(255,45,135,.07);box-shadow:0 0 28px -8px rgba(255,45,135,.6)}
+.alt-zig .zkpis > span:first-child{border-color:var(--line)}
+.alt-zig .zkpis > span{transition:border-color .25s,box-shadow .25s,background .25s}
+.alt-zig .zkpis > span:hover{border-color:var(--pink);background:rgba(255,45,135,.07);box-shadow:0 0 28px -8px rgba(255,45,135,.6)}
 .vol{position:absolute;z-index:3;right:max(18px,env(safe-area-inset-right,0px));bottom:22px;display:flex;align-items:center;gap:12px;padding:6px 16px 6px 6px;border-radius:999px;border:1px solid rgba(244,240,242,.25);background:rgba(6,5,7,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .vol button{width:38px;height:38px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(244,240,242,.1);color:var(--paper);cursor:pointer;transition:background .2s,color .2s}
 .vol button[aria-pressed="true"]{background:var(--pink);color:var(--ink)}
@@ -358,7 +360,7 @@ html{background:var(--ink)}
 .sheet h2{margin:16px 0 20px;font-size:clamp(32px,4vw,48px);line-height:.98}
 .sheet .lead{margin:0 0 28px;font-size:18px;line-height:1.7;max-width:66ch;color:#e6e0e3}
 .sheet .kp{gap:12px;margin:28px 0 36px}
-.sheet .kp span{padding:16px 20px;gap:6px;min-width:150px}
+.sheet .kp > span{padding:16px 20px;gap:6px;min-width:150px}
 .sheet .kp b{font-size:30px}
 .sheet ul{gap:16px}
 .sheet li{font-size:16.5px;line-height:1.7;padding-left:24px}
@@ -375,7 +377,7 @@ html{background:var(--ink)}
 .sheet .sr p{font-size:16px;line-height:1.7}
 .sheet .links{margin-top:32px;gap:12px}
 .sheet .repo{padding:16px 18px;margin-top:14px}
-@media (max-width:640px){.sheet{padding:max(22px,env(safe-area-inset-top,0px)) 20px 48px}.sheet .kp span{min-width:0}.sheet .kp b{font-size:24px}.sheet .lead{font-size:16.5px}.sheet li{font-size:15.5px}}
+@media (max-width:640px){.sheet{padding:max(22px,env(safe-area-inset-top,0px)) 20px 48px}.sheet .kp > span{min-width:0}.sheet .kp b{font-size:24px}.sheet .lead{font-size:16.5px}.sheet li{font-size:15.5px}}
 .head h2{margin:0;font-size:clamp(40px,6vw,84px)}
 .hero-id .max{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;padding-top:clamp(32px,4vw,56px)}
 .reelhero .hero-id h1{margin:0;font-size:clamp(40px,6vw,84px);font-weight:800;line-height:.92;letter-spacing:-.035em}
@@ -445,6 +447,7 @@ html[lang="tr"] .svc-card h3{line-height:1.12}
 @media (max-width:640px){.langm summary{width:34px;height:34px;font-size:11px}}
 @media (max-width:400px){.langm summary{width:32px;height:32px}}
 .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.tnav{display:flex;align-items:center;gap:20px;margin-right:14px;font-size:14px;font-weight:700}.tnav a{color:var(--mute);text-decoration:none;white-space:nowrap;transition:color .2s}.tnav a:hover,.tnav a[aria-current]{color:var(--paper)}@media (max-width:1060px){.topbar .tnav{display:none}}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/fav-32.png"><link rel="apple-touch-icon" href="/fav-180.png">
 
@@ -454,6 +457,7 @@ html[lang="tr"] .svc-card h3{line-height:1.12}
 <div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
 <header class="topbar gut">
   <div class="max">
+    <nav class="tnav" aria-label="Sections" data-i18n-aria="navl"><a href="/en/" data-i18n="nhome" aria-current="page">Home</a><a href="#work" data-i18n="nw">Work</a><a href="#services" data-i18n="ns">Services</a><a href="/showreel/" data-i18n="nshow">Showreel</a><a href="#about" data-i18n="na">About</a><a href="#contact" data-i18n="nc">Contact</a></nav>
     <div class="topright">
       <div class="socials" aria-label="Profiles">
         <a href="https://www.linkedin.com/in/benianerdogan/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg></a>
@@ -549,9 +553,9 @@ var C = {
  ai:{v:'/media/repos.mp4',org:['GitHub · yunalhoshi','Python · Node.js · Claude API'],t:'AI & automation',lead:'I build tools that remove manual work from outreach, content and community operations, and I like shipping small, polished things.',
   repos:[['outreach-autopilot','B2B lead research and cold-email pipeline with verified AI personalisation, deterministic scoring, compliance checks and human approval.','Node.js · Playwright · Claude API · Google Sheets','https://github.com/yunalhoshi/outreach-autopilot-showcase'],['gmail-draft-automation','CSV to Gmail drafts and in-thread reply drafts for outreach campaigns. Resume-safe, nothing is sent automatically.','Python · Gmail API','https://github.com/yunalhoshi/gmail-draft-automation'],['jarvis-second-brain','Markdown knowledge base with a 3D graph and a voice assistant that answers only from my notes.','Python · Three.js · Claude · ElevenLabs','https://github.com/yunalhoshi/jarvis-second-brain'],['glow-up-rush','Draw-the-path makeover game for YouTube Playables with 100 procedural levels, all art drawn in code.','JavaScript · Canvas · Web Audio · Playables SDK','https://github.com/yunalhoshi/glow-up-rush'],['motion-showreel','My showreel: code-driven, beat-synced video built with Remotion.','TypeScript · React · Remotion','https://github.com/yunalhoshi/motion-showreel']],
   links:[['github.com/yunalhoshi','https://github.com/yunalhoshi']]},
- game:{v:'/media/game.mp4',org:['YouTube · Twitch','Creator & editor'],t:'Gaming creator & editor',lead:'I play, edit and publish my own VALORANT and CS2 content, from cinematic edits to fast Shorts.',
-  li:['Cinematic edits and 24 Shorts on YouTube; my best Short reached <b>6.8K views</b>.','Cut my own Twitch channel trailer.','Competitive VALORANT and CS2 player, and coach for other players through GG Clan.','My showreel is built in code with React and Remotion and cut to the beat.'],
-  links:[['YouTube','https://www.youtube.com/@benianroden'],['Twitch','https://www.twitch.tv/benianroden']]},
+ game:{v:'/media/game.mp4',org:['YouTube · Twitch','Creator & editor'],t:'Gaming creator & editor',lead:'I play, edit and publish my own VALORANT, CS2, Call of Duty MW4 and Rainbow Six Siege content, from cinematic edits to fast Shorts.',
+  li:['Cinematic edits and 24 Shorts on YouTube; my best Short reached <b>6.8K views</b>.','Cut my own Twitch channel trailer.','Competitive player in VALORANT, CS2, Call of Duty MW4 and Rainbow Six Siege, and a CS2 and VALORANT coach through GG Clan.','My showreel is built in code with React and Remotion and cut to the beat.'],
+  links:[['Book a coaching session','https://ggclan.gg/benian'],['YouTube','https://www.youtube.com/@benianroden'],['Twitch','https://www.twitch.tv/benianroden']]},
  aff:{v:'/media/affil.mp4',org:['Online casino operator · name on request','Jun – Nov 2024','Hybrid · TR · MENA · EU'],t:'Affiliate Manager',lead:'Promoted from Customer Support Agent after six months, I ran the operator\'s affiliate, streamer and creator partnerships across Turkish, MENA and European markets.',
   li:['Managed and retained <b>50–75 affiliates, streamers and creators</b> on CPA, revenue share and hybrid deals.','Ran acquisition campaigns across <b>16–20 Telegram channels</b>, averaging <b>~150–200 first-time depositors a month</b>.','Recruited new affiliates and creators and tracked FTD and conversion KPIs.','Before the promotion, as Customer Support Agent (Dec 2023 – May 2024), I handled <b>~300 player conversations a day</b> over live chat and WhatsApp.'],
   kp:[['50–75','partners'],['150–200','FTDs / mo'],['16–20','channels']]}
@@ -570,7 +574,7 @@ var STR = {
     cal:'Calendar', mail:'Email · tap to copy', foot:'Gaming · Content · Marketing · Automation', copied:'Copied', more:'Read the full story →',
     impr:'impr.', clicks:'clicks', conv:'conv.', views:'site views', langBtn:'EN', langLabel:'Language',
     svc:'Services', svc_sub:'Esports hosting, gaming social media, video editing, marketing and partnerships.', s1k:'On camera', s1h:'Esports &amp; gaming host', s1p:'On-camera hosting for esports and gaming content: interviews, episode openers, event coverage and branded video. I hosted street interviews in five Turkish cities for İlave TV and script AI-generated launch videos for GG Clan.', s2k:'Social', s2h:'Gaming social media management', s2p:'Day-to-day social for gaming brands on TikTok, YouTube, Instagram, Reddit and Telegram: planning, publishing and community replies. I grew Omchain\'s Telegram from 5K to 9K members and its Instagram from about 950 to 2K followers, and I run GG Clan\'s channels today.', s3k:'Editing', s3h:'Gaming video editing', s3p:'Short-form and cinematic edits for VALORANT, CS2 and Call of Duty, cut for TikTok, Reels and YouTube Shorts. The top five GG Clan TikToks I produced reached 1.86M views, and my own showreel is built in code with Remotion.', s4k:'Growth', s4h:'Esports &amp; iGaming marketing', s4p:'Paid social and affiliate growth for gaming and iGaming brands. With our media agency I ran GG Clan campaigns on TikTok, Meta, Reddit, Snapchat and Amazon/Twitch: 1.79M impressions and 258 conversions. In iGaming I managed 50–75 affiliates bringing 150–200 first-time depositors a month.', s5k:'Partnerships', s5h:'Creator &amp; esports partnerships', s5p:'Finding, pitching and managing creators, streamers and pro players. I reach 300–400 creators and pros a month across Twitch, Kick, YouTube, TikTok and X, in their own language, and follow each deal through to delivery.', s6k:'Live events', s6h:'Esports tournament operations', s6p:'Stage, referee, player, network and broadcast coordination for esports tournaments. Four years across Gençlik Kupası and other national competitions, VCT broadcast support and ESL broadcasts including IEM Katowice.', about:'About me', a1:'I\'m Benian Erdoğan, also known online as Benian Roden: an on-camera host, gaming content creator and marketer based in Ankara, Türkiye. I studied at Başkent University and work remotely with gaming teams across Europe, MENA and North America.', a2:'My work sits where esports, content and growth meet. At GG Clan I run creator and pro-player partnerships, produce the vertical videos behind 1.86M TikTok views, coordinate paid campaigns with our media agency and coach CS2 and VALORANT players 1:1. Before that I reported on camera for İlave TV, where my street interviews passed 2.5M views on Reels, and spent four years behind the scenes of esports tournaments and broadcasts, from Gençlik Kupası to VCT and IEM Katowice.', a3:'I also grew Web3 and iGaming communities on Telegram and Instagram, and I build my own AI tools with the Claude API to take manual work out of outreach and content. If you need someone who can stand in front of the camera, knows the game and ties it all back to numbers, let\'s talk.', nw:'Work', ns:'Services', na:'About', nc:'Contact', navl:'Sections',
-    casestudy:'Read the full case study →', allsvc:'See all services →', nshow:'Showreel',
+    nhome:'Home', casestudy:'Read the full case study →', allsvc:'See all services →', nshow:'Showreel',
     close:'Close', next:'Next', prev:'Previous', unmute:'Unmute', mute:'Mute', volume:'Volume', details:'Work details', profiles:'Profiles'},
   tr: {book:'GÖRÜŞME PLANLA', book_arrow:'GÖRÜŞME PLANLA →', role:'Espor Sunucusu, Oyun İçerik Üreticisi ve Pazarlama Uzmanı', work:'Öne çıkan işler', work_sub:'Rolümü, tarihleri, yaptıklarımı ve sonuçları görmek için bir projeye tıklayın.',
     why:'Neden benimle çalışmalısınız?', why_h:'Sundum, oynadım, yönettim, pazarladım.', why_p:'2,5 milyonu aşan izlenmeye ulaşan sokak röportajlarından VCT ve IEM gibi espor sahnelerine, rakamların arkasındaki reklamlardan affiliate ağlarına ve topluluklara kadar her aşamada yer aldım. İnsanların durup izlediği içerikler üretiyor, bu ilgiyi ölçülebilir sonuca dönüştürüyorum.',
@@ -578,7 +582,7 @@ var STR = {
     cal:'Takvim', mail:'E-posta · kopyalamak için tıklayın', foot:'Oyun · İçerik · Pazarlama · Otomasyon', copied:'Kopyalandı', more:'Detayları görün →',
     impr:'gösterim', clicks:'tıklama', conv:'dönüşüm', views:'site ziyareti', langBtn:'TR', langLabel:'Dil',
     svc:'Hizmetler', svc_sub:'Espor sunuculuğu, oyun sosyal medya yönetimi, video kurgu, pazarlama ve iş birlikleri.', s1k:'Kamera önünde', s1h:'Espor ve oyun sunucusu', s1p:'Espor ve oyun içerikleri için kamera önü sunuculuk: röportajlar, bölüm açılışları, etkinlik çekimleri ve marka videoları. İlave TV için beş şehirde sokak röportajları yaptım; GG Clan için yapay zekâ ile üretilen lansman videolarının senaryolarını yazıyorum.', s2k:'Sosyal medya', s2h:'Oyun sosyal medya yönetimi', s2p:'Oyun markaları için TikTok, YouTube, Instagram, Reddit ve Telegram\'da günlük sosyal medya yönetimi: planlama, paylaşım ve topluluk yanıtları. Omchain\'in Telegram topluluğunu 5 binden 9 bin üyeye, Instagram hesabını yaklaşık 950\'den 2 bin takipçiye çıkardım; bugün GG Clan\'ın hesaplarını yönetiyorum.', s3k:'Kurgu', s3h:'Oyun video kurgusu', s3p:'VALORANT, CS2 ve Call of Duty için TikTok, Reels ve YouTube Shorts\'a uygun kısa ve sinematik kurgular. Ürettiğim GG Clan TikTok videolarının en çok izlenen beşi 1,86 milyon izlenmeye ulaştı; kendi showreel\'imi de Remotion ile kodla hazırladım.', s4k:'Büyüme', s4h:'Espor ve iGaming pazarlaması', s4p:'Oyun ve iGaming markaları için ücretli sosyal medya reklamları ve affiliate büyümesi. Medya ajansımızla GG Clan için TikTok, Meta, Reddit, Snapchat ve Amazon/Twitch kampanyaları yürüttüm: 1,79 milyon gösterim ve 258 dönüşüm. iGaming tarafında ayda 150–200 FTD getiren 50–75 affiliate\'i yönettim.', s5k:'İş birlikleri', s5h:'İçerik üreticisi ve espor iş birlikleri', s5p:'İçerik üreticilerini, yayıncıları ve profesyonel oyuncuları buluyor, onlarla görüşüyor ve iş birliğini yönetiyorum. Twitch, Kick, YouTube, TikTok ve X\'te her ay 300–400 üretici ve oyuncuya kendi dillerinde ulaşıyor, her anlaşmayı teslimata kadar takip ediyorum.', s6k:'Canlı etkinlik', s6h:'Espor turnuva operasyonları', s6p:'Espor turnuvalarında sahne, hakem, oyuncu, ağ ve yayın koordinasyonu. Gençlik Kupası ve diğer ulusal yarışmalarda, VCT yayın desteğinde ve IEM Katowice dahil ESL yayınlarında dört yıllık deneyimim var.', about:'Hakkımda', a1:'Ben Benian Erdoğan; internette Benian Roden olarak da biliniyorum. Ankara\'da yaşayan bir sunucu, oyun içerik üreticisi ve pazarlama uzmanıyım. Başkent Üniversitesi\'nde okudum; Avrupa, MENA ve Kuzey Amerika\'daki oyun ekipleriyle uzaktan çalışıyorum.', a2:'İşim espor, içerik ve büyümenin kesiştiği yerde. GG Clan\'da içerik üreticisi ve profesyonel oyuncu iş birliklerini yürütüyor, 1,86 milyon TikTok izlenmesine ulaşan dikey videoları üretiyor, medya ajansımızla ücretli kampanyaları koordine ediyor ve CS2 ile VALORANT oyuncularına birebir koçluk yapıyorum. Öncesinde İlave TV\'de kamera karşısında muhabirlik yaptım; sokak röportajlarım Reels\'te 2,5 milyon izlenmeyi aştı. Dört yıl boyunca da Gençlik Kupası\'ndan VCT ve IEM Katowice\'e kadar espor turnuvalarının ve yayınlarının kamera arkasında çalıştım.', a3:'Telegram ve Instagram\'da Web3 ve iGaming topluluklarını büyüttüm; iletişim ve içerik işlerindeki manuel adımları azaltmak için Claude API ile kendi yapay zekâ araçlarımı geliştiriyorum. Kamera karşısında durabilen, oyunu bilen ve her şeyi rakamlara bağlayan birini arıyorsanız konuşalım.', nw:'İşler', ns:'Hizmetler', na:'Hakkımda', nc:'İletişim', navl:'Bölümler',
-    casestudy:'Vaka çalışmasının tamamını okuyun (EN) →', allsvc:'Tüm hizmetleri görün (EN) →', nshow:'Showreel',
+    nhome:'Ana sayfa', casestudy:'Vaka çalışmasının tamamını okuyun →', allsvc:'Tüm hizmetleri görün →', nshow:'Showreel',
     close:'Kapat', next:'Sonraki', prev:'Önceki', unmute:'Sesi aç', mute:'Sesi kapat', volume:'Ses düzeyi', details:'Proje detayları', profiles:'Profiller',
     title:'Benian Erdoğan – Espor Sunucusu ve Oyun İçerik Üreticisi',
     desc:'Espor sunucusu, oyun içerik üreticisi ve pazarlama uzmanı. GG Clan için 1,86 milyon TikTok izlenmesi, VCT ve IEM yayın desteği ve topluluk büyümesi.'}
@@ -604,8 +608,9 @@ var C_TR = {
   kp:[['5K→9K','Telegram'],['+2,5K','bir ayda'],['950→2K','Instagram']],links:[['Instagram\'da Omchain','https://www.instagram.com/omchainio/']]},
  ai:{t:'Yapay zekâ ve otomasyon',lead:'İletişim, içerik ve topluluk operasyonlarındaki manuel işleri otomatikleştiren araçlar geliştiriyorum; küçük ama özenle tamamlanmış projeler yayınlamayı seviyorum.',
   repos:[['outreach-autopilot','B2B potansiyel müşteri araştırması ve soğuk e-posta süreci: yapay zekâ ile doğrulanmış kişiselleştirme, kurala dayalı puanlama ve uyumluluk kontrolleri; her adımda insan onayı.','Node.js · Playwright · Claude API · Google Sheets','https://github.com/yunalhoshi/outreach-autopilot-showcase'],['gmail-draft-automation','İletişim kampanyaları için CSV\'den Gmail taslakları ve mevcut yazışmalara yanıt taslakları oluşturur. Kaldığı yerden devam edebilir; hiçbir şey otomatik gönderilmez.','Python · Gmail API','https://github.com/yunalhoshi/gmail-draft-automation'],['jarvis-second-brain','3D bağlantı haritasına sahip bir Markdown bilgi tabanı ve yalnızca notlarımdan yanıt veren bir sesli asistan.','Python · Three.js · Claude · ElevenLabs','https://github.com/yunalhoshi/jarvis-second-brain'],['glow-up-rush','YouTube Playables için yolu çizerek oynanan bir makyaj oyunu; 100 prosedürel bölüm, tüm görseller kodla oluşturuldu.','JavaScript · Canvas · Web Audio · Playables SDK','https://github.com/yunalhoshi/glow-up-rush'],['motion-showreel','Showreel\'im: Remotion ile kodla üretilmiş, müziğin ritmine senkronize bir video.','TypeScript · React · Remotion','https://github.com/yunalhoshi/motion-showreel']]},
- game:{org:['YouTube · Twitch','İçerik üreticisi ve video editörü'],t:'Oyun içerik üreticisi ve video editörü',lead:'VALORANT ve CS2 oynuyor; sinematik kurgulardan Shorts videolarına kadar kendi içeriklerimi kurgulayıp yayınlıyorum.',
-  li:['YouTube\'da sinematik kurgular ve 24 Shorts videosu yayınladım; en çok izlenen Shorts videom <b>6,8 bin izlenmeye</b> ulaştı.','Kendi Twitch kanalımın fragmanını kurguladım.','Rekabetçi VALORANT ve CS2 oyuncusuyum; GG Clan üzerinden diğer oyunculara koçluk yapıyorum.']},
+ game:{org:['YouTube · Twitch','İçerik üreticisi ve video editörü'],t:'Oyun içerik üreticisi ve video editörü',lead:'VALORANT, CS2, Call of Duty MW4 ve Rainbow Six Siege oynuyor; sinematik kurgulardan Shorts videolarına kadar kendi içeriklerimi kurgulayıp yayınlıyorum.',
+  li:['YouTube\'da sinematik kurgular ve 24 Shorts videosu yayınladım; en çok izlenen Shorts videom <b>6,8 bin izlenmeye</b> ulaştı.','Kendi Twitch kanalımın fragmanını kurguladım.','VALORANT, CS2, Call of Duty MW4 ve Rainbow Six Siege oynuyorum; GG Clan üzerinden CS2 ve VALORANT oyuncularına koçluk yapıyorum.'],
+  links:[['Koçluk seansı alın','https://ggclan.gg/benian'],['YouTube','https://www.youtube.com/@benianroden'],['Twitch','https://www.twitch.tv/benianroden']]},
  aff:{org:['Online casino operatörü · firma adı talep hâlinde paylaşılır','Haziran – Kasım 2024','Hibrit · TR · MENA · Avrupa'],t:'Affiliate Yöneticisi',lead:'Altı ay Müşteri Destek Temsilcisi olarak çalıştıktan sonra terfi ettim ve operatörün Türkiye, MENA ve Avrupa pazarlarındaki affiliate, yayıncı ve içerik üreticisi ortaklıklarını yönettim.',
   li:['CPA, gelir paylaşımı ve hibrit anlaşmalarla <b>50–75 affiliate, yayıncı ve içerik üreticisini</b> yönettim ve uzun vadeli iş birliğini sürdürdüm.','<b>16–20 Telegram kanalında</b> kullanıcı kazanım kampanyaları yürüttüm; ayda ortalama <b>150–200 FTD (ilk yatırımını yapan oyuncu)</b> getirdim.','Yeni affiliate\'ler ve içerik üreticileriyle anlaştım; FTD ve dönüşüm KPI\'larını takip ettim.','Terfiden önce Müşteri Destek Temsilcisi olarak (Aralık 2023 – Mayıs 2024) canlı sohbet ve WhatsApp üzerinden <b>günde ~300 oyuncu görüşmesi</b> yürüttüm.'],
   kp:[['50–75','ortak'],['150–200','FTD / ay'],['16–20','kanal']]}
@@ -686,7 +691,7 @@ function buildAlts(){
     {k:'ai', t:'AI & automation', org:'GitHub · yunalhoshi', m:'5', ml:'public projects · Claude API', code:true,
       kpis:[['5','Public projects'],['EN · AR · TR','Outreach languages'],['Claude API','Python · Node.js']]},
     {k:'game', t:'In game', org:'YouTube · Twitch', m:'6.8K', ml:'views on my best Short', imgs:['/img/k2.jpg','/img/k1.jpg','/img/k1.jpg'], two:true,
-      kpis:[['6.8K','Best Short'],['24','Shorts'],['2','Games: VALORANT, CS2']]},
+      kpis:[['6.8K','Best Short'],['24','Shorts'],['4','Games: VALORANT, CS2, CoD MW4, R6']]},
     {k:'aff', t:'Affiliates', org:'Affiliate Manager · iGaming · 2024', m:'50–75', ml:'partners · 150–200 FTDs / mo', stats:true,
       kpis:[['50–75','Partners'],['150–200','FTDs / month'],['16–20','Telegram channels']]}
   ];
@@ -696,7 +701,7 @@ function buildAlts(){
     events:{t:'Turnuva ve yayın', org:'Canlı etkinlikler · 2018–2022', m:'4 yıl', badges:['Sahne','Yayın','Operasyon'], kpis:[['4','Ulusal turnuva'],['VCT','Yayın desteği'],['IEM','Katowice 2018–20']]},
     omchain:{t:'Topluluk ve sosyal medya', ml:'Telegram üyesi · Instagram 950 → 2K', kpis:[['5K → 9K','Telegram üyesi'],['+2,5K','Bir ayda takipçi'],['950 → 2K','Instagram']]},
     ai:{t:'Yapay zekâ ve otomasyon', ml:'açık kaynak proje · Claude API', kpis:[['5','Açık kaynak proje'],['EN · AR · TR','Outreach dilleri'],['Claude API','Python · Node.js']]},
-    game:{t:'Oyuncu olarak', m:'6,8K', ml:'en çok izlenen Shorts videom', kpis:[['6,8K','En çok izlenen Shorts'],['24','Shorts'],['2','Oyun: VALORANT, CS2']]},
+    game:{t:'Oyuncu olarak', m:'6,8K', ml:'en çok izlenen Shorts videom', kpis:[['6,8K','En çok izlenen Shorts'],['24','Shorts'],['4','Oyun: VALORANT, CS2, CoD MW4, R6']]},
     aff:{t:'Affiliate yönetimi', org:'Affiliate Yöneticisi · iGaming · 2024', ml:'ortak · ayda 150–200 FTD', kpis:[['50–75','Ortak'],['150–200','FTD / ay'],['16–20','Telegram kanalı']]}
   };
   if (LANG === 'tr') W = W.map(function(w){ var o = {}, p, b = W_TR[w.k] || {}; for (p in w) o[p] = w[p]; for (p in b) o[p] = b[p]; return o; });
