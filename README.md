@@ -30,5 +30,5 @@ npx serve .
 ## Contact
 
 - Email: benian@ggclan.com
-- LinkedIn: https://www.linkedin.com/in/benianroden
+- LinkedIn: https://www.linkedin.com/in/benianerdogan/
 - X: https://x.com/benianroden
