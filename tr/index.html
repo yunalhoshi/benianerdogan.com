@@ -817,15 +817,21 @@ function buildAlts(){
   tilePlay();
 }
 
-// Short silent clips in the work cards: load and play only while on screen
+// Work cards: clips stay as still posters and play only while the mouse is over that card
 function tilePlay(){
-  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
-  if (still) return;
-  var check = function(){ var h = window.innerHeight; document.querySelectorAll('.mini3d').forEach(function(m){ var r = m.getBoundingClientRect(); m.classList.toggle('off', !(r.bottom > -100 && r.top < h + 100)); }); document.querySelectorAll('video.tclip[data-src]').forEach(function(v){
-    var r = v.getBoundingClientRect(), on = r.bottom > -200 && r.top < h + 200 && r.width > 0;
-    if (on){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } } else if (!v.paused) v.pause(); }); };
+  var check = function(){ var h = window.innerHeight; document.querySelectorAll('.mini3d').forEach(function(m){ var r = m.getBoundingClientRect(); m.classList.toggle('off', !(r.bottom > -100 && r.top < h + 100)); }); };
   if (!window._tileOn){ window._tileOn = 1; var t; var later = function(){ clearTimeout(t); t = setTimeout(check, 120); };
-    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later); document.addEventListener('visibilitychange', check); }
+    window.addEventListener('scroll', later, {passive:true}); window.addEventListener('resize', later);
+    var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !!(navigator.connection && navigator.connection.saveData);
+    var cur = null, vids = function(z){ return z.querySelectorAll('video.tclip[data-src]'); };
+    if (!still) document.addEventListener('mouseover', function(e){
+      var z = e.target.closest ? e.target.closest('.zz') : null; if (z === cur) return;
+      if (cur) vids(cur).forEach(function(v){ v.pause(); });
+      cur = z;
+      if (z) vids(z).forEach(function(v){ if (!v.getAttribute('src')) v.src = v.dataset.src; var p = v.play(); if (p && p.catch) p.catch(function(){}); });
+    });
+    document.addEventListener('visibilitychange', function(){ if (document.hidden && cur) vids(cur).forEach(function(v){ v.pause(); }); });
+  }
   check();
 }
 
